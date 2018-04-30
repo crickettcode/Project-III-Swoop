@@ -45,18 +45,22 @@ const summer_Time_Daze = new Event({
 })
 
 const crickett = new User({
+    name: "Crickett",
     dob: 2 / 2 / 87,
     email: "crickettcode@gmail.com",
     city: "ATL"
+
 })
 
 const finn = new User({
+    name: "Finn",
     dob: 1 / 1 / 10,
     email: "finnoggn@gmail.com",
     city: "ATL"
 })
 
 const tyler = new User({
+    name: "Tyler",
     dob: 12 / 8 / 91,
     email: "trysten@gmail.com",
     city: "ATL"
