@@ -1,15 +1,16 @@
 const express = require('express');
+const { User } = require('../db/schema')
 const router = express.Router();
-const User = require('../db/models/User')
 
-router.get('/', function (req, res) {
-    User.find({})
-        .then((user) => {
-            res.render('user/index', {
-                user
-            })
+
+router.get('/', (req, res) => {
+    User.find()
+        .then(user => {
+            res.json(user)
         })
-        .catch((error) => {
-            console.log("what have you done", error)
-        })
-});
+        .catch((err) =>
+            console.log(err))
+})
+
+
+module.exports = router;
