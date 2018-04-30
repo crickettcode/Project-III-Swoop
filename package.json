@@ -2,7 +2,7 @@
   "name": "Project-III-Swoop",
   "version": "1.0.0",
   "description": "Project III/ Swoop - the app that makes the plan, so that you be spontaneous",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/crickettcode/Project-III-Swoop#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "mongoose": "^5.0.16"
