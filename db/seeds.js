@@ -27,7 +27,7 @@ const taka_sushi = new Itinerary({
     duration: 'two hours'
 })
 
-const drunken_Unicorn = new Iternary({
+const drunken_Unicorn = new Itinerary({
     title: 'Night_Life',
     description: 'Adventure Time',
     duration: 'unlimited'

@@ -27,7 +27,7 @@ const EventSchema = new Schema({
         default: "We has the fun"
     },
 
-    itinerary: [ItenerarySchema]
+    itinerary: [ItinerarySchema]
 
 })
 
@@ -56,8 +56,8 @@ const UserSchema = new Schema({
 
 const User = mongoose.model('User', UserSchema)
 const Event = mongoose.model('Event', EventSchema)
-const Itenerary = mongoose.model('Itinerary', ItinerarySchema)
+const Itinerary = mongoose.model('Itinerary', ItinerarySchema)
 
 module.exports = {
-    User, Event, Itenerary
+    User, Event, Itinerary
 }
