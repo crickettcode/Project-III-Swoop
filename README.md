@@ -23,6 +23,9 @@ Project III/ Swoop - the app that makes the plan, so that you be spontaneous ..
 
 ### Obstacles 
 
-I found that the biggest challenge in this project wasn't the  stress of project itself, but *overcoming the stress surrounding the project*. I believe that just beginning was one of the most difficult parts. Through this, I learned a great deal about "managing my stress levels" and maintaining a healthy work / life balance. I also started each morning with my favorite podcast, "Developer Tea" as well as a gratitude list to keep my outlook positive. This has really been a valuable skillset to learn as it is one that I will continue to practice throughout my career as a developer.
-
++ I found that the biggest challenge in this project wasn't the  stress of project itself, but *overcoming the stress surrounding the project*. I believe that just beginning was one of the most difficult parts. Through this, I learned a great deal about "managing my stress levels" and maintaining a healthy work / life balance. I also started each morning with my favorite podcast, "Developer Tea" as well as a gratitude list to keep my outlook positive. This has really been a valuable skillset to learn as it is one that I will continue to practice throughout my career as a developer.
+<br>
 ![Stress](https://i.imgur.com/B09fzOz.jpg "Stress")
+<br>
+
++ Another challenge I faced was switching to *React* for my front-end (client-side) instead of using *Handlebars*.  
