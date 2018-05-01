@@ -23,7 +23,7 @@ class HomePage extends Component {
 
     getAllUsers = async () => {
         try {
-            const res = await axios.get('/api/users')
+            const res = await axios.get('api/users')
             console.log(res.data)
             this.setState({ users: res.data })
         } catch (err) {
