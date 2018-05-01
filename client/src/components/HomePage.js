@@ -28,7 +28,7 @@ class HomePage extends Component {
         return (
             <div>
                 <div>
-                    This is your mom
+                    Phone Home
                 </div>
                 HomePage
             </div>
