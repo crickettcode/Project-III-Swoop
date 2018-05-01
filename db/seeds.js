@@ -1,13 +1,13 @@
 require('dotenv').config()
 const User = require('./models/User')
-const Event = require('.models/Event')
-const Itinerary = require('.models/Itinerary')
+const Event = require('./models/Event')
+const Itinerary = require('./models/Itinerary')
 
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true })
+mongoose.connect(process.env.MONGODB_URI)
 mongoose.Promise = global.Promise
 
-const { User, Event, Itinerary } = require('./schema')
+//const { User, Event, Itinerary } = require('./schema')
 
 
 
