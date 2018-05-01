@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/client/build/index.html')
 })
 
+app.use.apply('/api/user', UserController)
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
