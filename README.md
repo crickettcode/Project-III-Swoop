@@ -19,3 +19,10 @@ Project III/ Swoop - the app that makes the plan, so that you be spontaneous ..
 + Mongo - database 
 + Express/Node - server 
 + VSCode - text editor 
+
+
+### Obstacles 
+
+I found that the biggest challenge in this project wasn't the  stress of project itself, but *overcoming the stress surrounding the project*. I believe that just beginning was one of the most difficult parts. Through this, I learned a great deal about "managing my stress levels" and maintaining a healthy work / life balance. I also started each morning with my favorite podcast, "Developer Tea" as well as a gratitude list to keep my outlook positive. This has really been a valuable skill as it is one that I will continue to practice throughout my career as a developer.
+
+![Stress](https://imgur.com/B09fzOz "Stress")
