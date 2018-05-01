@@ -1,16 +1,18 @@
 const express = require('express');
 const { User } = require('../db/schema')
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 
 
-router.get('/', (req, res) => {
-    User.find()
-        .then(user => {
-            res.json(user)
-        })
-        .catch((err) =>
-            console.log(err))
+router.get('/', async (req, res) => {
+    try {
+        const users = await User.find({})
+        res.json(users)
+    } catch (err) {
+        console.log(err)
+    }
 })
+
+
 
 
 router.post('/', (req, res) => {

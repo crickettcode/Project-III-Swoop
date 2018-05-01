@@ -23,17 +23,13 @@ class HomePage extends Component {
 
     getAllUsers = async () => {
         try {
-            await axios.get('/api/users')
-            this.setState({
-                users: response.data
-            })
-
+            const res = await axios.get('/api/users')
+            console.log(res.data)
+            this.setState({ users: res.data })
         } catch (err) {
-            console.log(err.message)
+            console.log(err)
         }
-
     }
-
 
 
     render() {
@@ -41,6 +37,7 @@ class HomePage extends Component {
             <div>
                 <div>
                     Phone Home
+
                 </div>
                 HomePage
             </div>

@@ -3,14 +3,6 @@
   "version": "1.0.0",
   "description": "Project III/ Swoop - the app that makes the plan, so that you be spontaneous",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "dev": "concurrently \"nodemon server.js\" \"cd ./client  && npm start \" ",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/crickettcode/Project-III-Swoop.git"
@@ -18,6 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "proxy": "http://localhost:3001",
   "bugs": {
     "url": "https://github.com/crickettcode/Project-III-Swoop/issues"
   },
@@ -27,7 +20,9 @@
     "concurrently": "^3.5.1",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
-    "mongoose": "^5.0.16"
+    "mongoose": "^5.0.16",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.3"
   },
   "engines": {
     "node": "8.6.0"

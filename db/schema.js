@@ -54,9 +54,9 @@ const UserSchema = new Schema({
 
 })
 
-const User = mongoose.model('User', UserSchema)
-const Event = mongoose.model('Event', EventSchema)
-const Itinerary = mongoose.model('Itinerary', ItinerarySchema)
+const User = mongoose.model('user', UserSchema)
+const Event = mongoose.model('event', EventSchema)
+const Itinerary = mongoose.model('itinerary', ItinerarySchema)
 
 module.exports = {
     User, Event, Itinerary
