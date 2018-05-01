@@ -38,7 +38,7 @@ const UserSchema = new Schema({
     },
 
     dob: {
-        type: Date,
+        type: String,
         default: 12 / 12 / 20
     },
     email: {
