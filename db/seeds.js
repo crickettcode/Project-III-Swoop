@@ -1,15 +1,23 @@
 require('dotenv').config()
+const User = require('./models/User')
+const Event = require('.models/Event')
+const Itinerary = require('.models/Itinerary')
+
 const mongoose = require('mongoose')
 mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true })
 mongoose.Promise = global.Promise
 
 const { User, Event, Itinerary } = require('./schema')
 
+
+
+
 const botanical_gardens = new Itinerary({
     title: 'Morning',
     description: "Lets skip through the flowers",
     duration: 'three whole hours'
 })
+
 const el_taco = new Itinerary({
     title: 'Noon',
     description: 'Tacos for me, Tequila for you',
@@ -27,20 +35,31 @@ const taka_sushi = new Itinerary({
     duration: 'two hours'
 })
 
-const drunken_Unicorn = new Itinerary({
+const white_water = new Itinerary({
+    title: 'All Day',
+    description: 'chill out',
+    duration: 'until they kick us out'
+})
+
+const drunken_unicorn = new Itinerary({
     title: 'Night_Life',
     description: 'Adventure Time',
     duration: 'unlimited'
 
 })
 
-const spring_Break = new Event({
+const spring_break = new Event({
     date: "Second Weekend in May",
     duration: "three days"
 })
 
-const summer_Time_Daze = new Event({
+const summer_time_daze = new Event({
     date: "First Weekend in July",
+    duration: "two days"
+})
+
+const graduation_celebration = new Event({
+    date: "Third Weekend in June",
     duration: "two days"
 })
 
@@ -52,6 +71,11 @@ const crickett = new User({
 
 })
 
+graduation_celebration.itinerary.push(drunken_unicorn)
+graduation_celebration.itinerary.push(white_water)
+crickett.event.push(graduation_celebration)
+
+
 const finn = new User({
     name: "Finn",
     dob: 1 / 1 / 10,
@@ -59,12 +83,24 @@ const finn = new User({
     city: "ATL"
 })
 
+summer_time_daze.itinerary.push(six_flags)
+summer_time_daze.itinerary.push(el_taco)
+finn.event.push(summer_time_daze)
+
+
 const tyler = new User({
     name: "Tyler",
     dob: 12 / 8 / 91,
     email: "trysten@gmail.com",
     city: "ATL"
 })
+
+spring_break.itinerary.push(botanical_gardens)
+spring_break.itinerary.push(taka_sushi)
+tyler.event.push(spring_break)
+
+
+
 
 User.remove({})
     .then(() => crickett.save())
