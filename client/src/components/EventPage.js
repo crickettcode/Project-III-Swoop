@@ -4,12 +4,19 @@ import axios from 'axios'
 import ItineraryPage from './ItineraryPage'
 
 class EventPage extends Component {
+
+
+
+
+
     render() {
+
+
+
 
         return (
 
             <div>
-
 
                 I am the Event Page
             </div>
