@@ -19,6 +19,7 @@ Project III/ Swoop - the app that makes the plan, so that you be spontaneous ..
 + Mongo - database 
 + Express/Node - server 
 + VSCode - text editor 
++ Material UI
 
 
 ### Obstacles 
@@ -28,3 +29,4 @@ Project III/ Swoop - the app that makes the plan, so that you be spontaneous ..
 ![Stress](https://i.imgur.com/B09fzOz.jpg "Stress")
 
 + Another challenge I faced was switching to *React* for my front-end (client-side) instead of using *Handlebars*.  
++ Learning to route with *React* was also a new challenge as well as styling components.
