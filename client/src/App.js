@@ -6,6 +6,7 @@ import HomePage from './components/HomePage'
 import UserPage from './components/UserPage'
 import EventPage from './components/EventPage'
 import ItineraryPage from './components/ItineraryPage'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
 
 class App extends Component {

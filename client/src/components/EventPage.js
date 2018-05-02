@@ -7,7 +7,7 @@ class EventPage extends Component {
 
     state = {
         user: {},
-        event: {}
+        events: []
     }
 
     componentDidMount() {
@@ -19,15 +19,25 @@ class EventPage extends Component {
                 console.log("one user", response.data)
                 this.setState({
                     user: response.data,
-                    event: response.data.event
+                    events: response.data.event
                 })
             })
     }
 
     render() {
+
         return (
             <div>
                 I am the Event Page for {this.state.user.name}
+                {this.state.events.map((event) => {
+                    return (
+                        <div>
+                            <li>{event.date}</li>
+                            <li>{event.description}</li>
+                        </div>
+                    )
+                })}
+
             </div>
         )
     }
