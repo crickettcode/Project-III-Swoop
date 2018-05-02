@@ -32,7 +32,9 @@ class EventPage extends Component {
                 {this.state.events.map((event) => {
                     return (
                         <div>
-                            <li>{event.date}</li>
+
+                            <Link to={`/events/${event._id}/itinerary`}>{event.date}</Link>
+
                             <li>{event.description}</li>
                         </div>
                     )
