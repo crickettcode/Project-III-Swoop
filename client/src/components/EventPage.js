@@ -13,8 +13,10 @@ class EventPage extends Component {
     destroy = () => {
         const user_id = this.props.match.params.userId
         axios.delete(`/api/users/${user_id}`)
-        console.log(user_id)
-
+            .then(response => {
+                this.props.history.push('/users')
+                console.log(user_id)
+            })
     }
 
 
