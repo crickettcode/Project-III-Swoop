@@ -10,6 +10,14 @@ class EventPage extends Component {
         events: []
     }
 
+    destroy = () => {
+        const user_id = this.props.match.params.userId
+        axios.delete(`/api/users/${user_id}`)
+        console.log(user_id)
+
+    }
+
+
     componentDidMount() {
         const banana = this.props.match.params.userId
         console.log("One user mounted")
@@ -27,13 +35,18 @@ class EventPage extends Component {
     render() {
 
         return (
+
             <div>
+
+                <button onClick={this.destroy}>Destroy</button>
+                <br />
+
                 I am the Event Page for {this.state.user.name}
                 {this.state.events.map((event) => {
                     return (
                         <div>
 
-                            <Link to={`/events/${event._id}/itinerary`}>{event.date}</Link>
+                            <Link to={`/users/${this.props.match.params.userId}/events/${event._id}/itinerary`}>{event.date}</Link>
 
                             <li>{event.description}</li>
                         </div>

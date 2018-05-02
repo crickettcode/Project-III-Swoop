@@ -12,6 +12,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 class App extends Component {
   render() {
     return (
+
       <Router>
         <div className="App">
           <Switch>
@@ -22,6 +23,7 @@ class App extends Component {
           </Switch>
         </div>
       </Router>
+
     );
   }
 }

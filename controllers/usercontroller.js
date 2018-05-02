@@ -22,15 +22,18 @@ router.get('/:userId', async (req, res) => {
     }
 })
 
-//router.get('/:userId/delete', async (req, res) => {
-// try {
-//const userId = await User.findById(req.params.id)
-// User.findByIdAndRemove(userId)
-// res.redirect('/users');
-// })
-//})
+router.delete('/:userId', async (req, res) => {
+    try {
+        const userId = req.params.userId
+        await User.findByIdAndRemove(userId)
+        res.json({
+            msg: "deleted"
+        })
+    } catch (err) {
+        console.log
+    }
 
-
+})
 
 
 
