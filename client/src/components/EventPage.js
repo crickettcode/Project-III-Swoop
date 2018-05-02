@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import User from './User'
-
+import ItineraryPage from './ItineraryPage'
 
 class EventPage extends Component {
     render() {
@@ -10,6 +9,7 @@ class EventPage extends Component {
         return (
 
             <div>
+                I am the Event Page
             </div>
 
 

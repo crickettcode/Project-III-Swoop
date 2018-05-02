@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import EventPage from './EventPage'
+
 
 
 class User extends Component {
