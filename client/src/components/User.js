@@ -3,33 +3,16 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import EventPage from './EventPage'
 
-
-
 class User extends Component {
 
     render() {
-
         return (
-
             <div>
-                <Link to={`/users/${this.props.user._id}`}>{this.props.user.name}</Link>
-                {this.props.user.name}
-                {this.props.user.dob}
-                {this.props.user.email}
-                {this.props.user.city}
+                <Link to={`/users/${this.props.user._id}/events`}>{this.props.user.name}</Link>
 
             </div>
-
-
         )
-
     }
 }
-
-
-
-
-
-
 
 export default User 

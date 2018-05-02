@@ -15,16 +15,14 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route path="/users" component={UserPage} />
-            <Route path="/users/:userId" component={EventPage} />
-            <Route path="/users/:userId/" component={ItineraryPage}
-
-
+            <Route exact path="/users" component={UserPage} />
+            <Route exact path="/users/:userId/events" component={EventPage} />
+            <Route exact path="/users/:userId/events/:eventId/itinerary" component={ItineraryPage} />
           </Switch>
         </div>
       </Router>
-        );
-      }
-    }
-    
-    export default App;
+    );
+  }
+}
+
+export default App;

@@ -9,6 +9,8 @@ class EventPage extends Component {
         return (
 
             <div>
+
+
                 I am the Event Page
             </div>
 
