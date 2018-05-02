@@ -3,5 +3,17 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 
+class NewUserForm extends Component {
 
-<form></form>
+    render() {
+        return (
+
+            <div>
+                hi
+            </div>
+        )
+    }
+}
+
+export default NewUserForm
+

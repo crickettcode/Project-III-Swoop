@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import User from './User'
+import NewUserForm from './NewUserForm'
 
 class UserPage extends Component {
 
     state = {
+        form: false,
         users: [],
         user: {
             name: "",
@@ -22,6 +24,9 @@ class UserPage extends Component {
 
     }
 
+    toggleform = () => {
+        this.setState({ form: !this.state.form })
+    }
 
     getAllUsers = async () => {
         try {
@@ -37,8 +42,8 @@ class UserPage extends Component {
     render() {
         return (
             <div>
-
-                <button>Create</button>
+                {this.state.form ? <NewUserForm /> : null}
+                <button onClick={this.toggleform}>Create</button>
 
                 {this.state.users.map((user, i) => {
                     return (
