@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import HomePage from './components/HomePage'
 import UserPage from './components/UserPage'
+import EventPage from './components/EventPage'
 
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/users" component={UserPage} />
+            <Route path="/users/:userId" component={EventPage} />
 
 
           </Switch>

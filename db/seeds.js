@@ -65,7 +65,7 @@ const graduation_celebration = new Event({
 
 const crickett = new User({
     name: "Crickett",
-    dob: 2 / 2 / 87,
+    dob: "2 / 2 / 87",
     email: "crickettcode@gmail.com",
     city: "ATL"
 
@@ -78,7 +78,7 @@ crickett.event.push(graduation_celebration)
 
 const finn = new User({
     name: "Finn",
-    dob: 1 / 1 / 10,
+    dob: "1 / 1 / 10",
     email: "finnoggn@gmail.com",
     city: "ATL"
 })
@@ -90,7 +90,7 @@ finn.event.push(summer_time_daze)
 
 const tyler = new User({
     name: "Tyler",
-    dob: 12 / 8 / 91,
+    dob: "12 / 8 / 91",
     email: "trysten@gmail.com",
     city: "ATL"
 })
