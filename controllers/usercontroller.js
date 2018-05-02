@@ -12,14 +12,14 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.get('/:userId', async (request, res) => {
+router.get('/:userId', async (req, res) => {
+    console.log("IN THE USER CONTROLLER, GET ONE USER", req.params)
     try {
-        const user = await User.findById(request.params.userId)
+        const user = await User.findById(req.params.userId)
         res.json(user)
     } catch (err) {
         console.log(err)
     }
-
 })
 
 
