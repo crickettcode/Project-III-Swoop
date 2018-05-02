@@ -36,16 +36,34 @@ router.delete('/:userId', async (req, res) => {
 })
 
 
+// router.post('/', (req, res) => {
+//     const newUserFromForm = req.body
+//     const user = new User({
+//         name: newUserFromForm.name,
+//         dob: newDateFromForm.dob,
+//         email: newEmailFromForm.email,
+//         city: newCityFromForm.city
+//     })
+
+//     const newUser = await user.save()
+//     res.json({ newUser })
+// })
 
 
-router.post('/', (req, res) => {
-    const newUser = new User(req.body.user)
-    newUser.save()
-        .then((user) => {
-            res.json(user)
-        })
-        .catch(console.log)
-})
+
+
+
+
+
+
+// router.post('/', (req, res) => {
+//     const newUser = new User(req.body.user)
+//     newUser.save()
+//         .then((user) => {
+//             res.json(user)
+//         })
+//         .catch(console.log)
+// })
 
 
 module.exports = router;

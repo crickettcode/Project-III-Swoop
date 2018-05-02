@@ -38,6 +38,8 @@ class UserPage extends Component {
         return (
             <div>
 
+                <button>Create</button>
+
                 {this.state.users.map((user, i) => {
                     return (
                         <div>

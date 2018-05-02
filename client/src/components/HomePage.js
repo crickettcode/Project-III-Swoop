@@ -12,7 +12,7 @@ class HomePage extends Component {
                 HomePage
 
                 <div>
-                    <Link to='/users'>Enter Here</Link>
+                    <Link to='/users'>Swoop</Link>
                 </div>
 
             </div>)
