@@ -46,15 +46,16 @@ class EventPage extends Component {
             <Eventstyle>
                 {/* <Button variant="raised" color="primary"> */}
                 {/* Destroy */}
-                <Button variant="raised" color="secondary" onClick={this.destroy}>Destroy</Button>
+                <Button variant="raised" color="secondary" onClick={this.destroy}>Remove this Event</Button>
                 {/* <br /> </Button> */}
-
-                I am the Event Page for {this.state.user.name}
+                <aside>
+                    I am the Event Page for {this.state.user.name} </aside>
                 {this.state.events.map((event) => {
+
                     return (
                         <section>
 
-                            <Link to={`/users/${this.props.match.params.userId}/events/${event._id}/itinerary`}>{event.date}</Link>
+                            <Link to={`/users/${this.props.match.params.userId}/events/${event._id}/itinerary`}>Go here for the {event.date}</Link>
 
                             <li>{event.description}</li>
                         </section>
@@ -96,10 +97,17 @@ nav, section, aside {
   margin: 5px;
   text-align: center;
   line-height: 100px;
+  font-size:20px;
 }
 
     section {
   flex-grow: 1;
+}
+
+button {
+    display:flex;
+    justify-content:space-around;
+
 }
 
 }
