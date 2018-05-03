@@ -7,14 +7,24 @@ import NewUserForm from './NewUserForm'
 class UserPage extends Component {
 
     state = {
-        form: false,
+
         users: [],
-        user: {
+        // user: {
+        //     name: "",
+        //     dob: "",
+        //     email: "",
+        //     city: ""
+        // },
+        newUser: {
+
             name: "",
             dob: "",
             email: "",
-            city: ""
-        }
+            city: "",
+        },
+
+        form: false,
+
 
     }
 
@@ -24,9 +34,7 @@ class UserPage extends Component {
 
     }
 
-    toggleform = () => {
-        this.setState({ form: !this.state.form })
-    }
+
 
     getAllUsers = async () => {
         try {
@@ -38,17 +46,51 @@ class UserPage extends Component {
         }
     }
 
-    createNewUser = (newUser) => {
-        axios.post(`/api/users`, { newUser })
-            .then((res) => {
-                this.setState({ user: res.data.user })
-            })
+    handleChange = (event) => {
+        const newUser = { ...this.state.newUser }
+        newUser[event.target.name] = event.target.value
+        this.setState({ newUser })
     }
+    // handleSubmit = async event => {
+    //     event.preventDefault()
+    //     const payload = {
+    //         name: this.state.name,
+    //         dob: this.state.dob,
+    //         email: this.state.email,
+    //         city: this.state.city
 
+    //     }
+    //     await axios.post(`/api/users`, payload);
+    //     await this.props.getAllUsers()
+
+    // }
+
+    createNewUser = async event => {
+        event.preventDefault()
+        const res = await axios.post(`/api/users`, this.state.newUser)
+        const users = [...this.state.users, res.data]
+        this.setState({
+            newUser: {
+
+                name: "",
+                dob: "",
+                email: "",
+                city: "",
+            },
+
+        })
+    }
+    toggleform = () => {
+        this.setState({ form: !this.state.form })
+    }
     render() {
         return (
             <div>
-                {this.state.form ? <NewUserForm /> : null}
+                {this.state.form ? <NewUserForm
+                    createNewUser={this.createNewUser}
+                    handleChange={this.handleChange}
+                    newUser={this.state.newUser}
+                    getAllUsers={this.getAllUsers} /> : null}
                 <button onClick={this.toggleform}>Create</button>
 
                 {this.state.users.map((user, i) => {

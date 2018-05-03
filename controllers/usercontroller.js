@@ -38,9 +38,9 @@ router.post('/', async (req, res) => {
     const newUserFromForm = req.body
     const user = new User({
         name: newUserFromForm.name,
-        dob: newDateFromForm.dob,
-        email: newEmailFromForm.email,
-        city: newCityFromForm.city
+        dob: newUserFromForm.dob,
+        email: newUserFromForm.email,
+        city: newUserFromForm.city
     })
     try {
         const newUser = await user.save()
@@ -50,18 +50,6 @@ router.post('/', async (req, res) => {
     }
 })
 
-// router.post('/', (req, res) => {
-//     const newUserFromForm = req.body
-//     const user = new User({
-//         name: newUserFromForm.name,
-//         dob: newDateFromForm.dob,
-//         email: newEmailFromForm.email,
-//         city: newCityFromForm.city
-//     })
-
-//     const newUser = await user.save()
-//     res.json({ newUser })
-//})
 
 
 
