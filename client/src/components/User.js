@@ -30,12 +30,20 @@ margin:auto;
 border:solid;
 font-family: 'Pangolin', cursive;
 color:white;
-padding:70px 82px 70px 82px
+padding:70px;
+
+
+@media (max-width:650px){
+
+a {
+text-align:center;
+}
+
 
 
 h4{
     display:flex;
-    padding: 15px 32px 15px 32px;
+
     text-align:center;
     font-size: 40px;
     

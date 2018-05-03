@@ -12,12 +12,7 @@ class UserPage extends Component {
     state = {
 
         users: [],
-        // user: {
-        //     name: "",
-        //     dob: "",
-        //     email: "",
-        //     city: ""
-        // },
+
         newUser: {
 
             name: "",
@@ -102,10 +97,10 @@ class UserPage extends Component {
 
                 {this.state.users.map((user, i) => {
                     return (
-                        <div>
+                        <UserDiv>
                             <User user={user} key={user._id} index={i} />
 
-                        </div>
+                        </UserDiv>
 
                     )
 
@@ -132,13 +127,35 @@ border-color:#466A46;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
-padding:20px 30px;
+padding:10px;
 font-size:35px;
+text-align:center;
+width: 100vw;
 
+@media (max-width:650px){
+    
+        align-items: center;
+    
+
+
+}
 
 button {
     display:flex;
     justify-content:center;
+    border:solid;
+    padding:15px;
 }
 
+user {
+    color:white;
+    border:solid;
+
+}
+
+`
+const UserDiv = styled.div`
+@media (max-width:650px){
+    width: 80vw;
+}
 `
