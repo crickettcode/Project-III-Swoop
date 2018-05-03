@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import User from './User'
 import NewUserForm from './NewUserForm'
-import { Button, Icon } from 'react-materialize'
+
+
 
 
 class UserPage extends Component {

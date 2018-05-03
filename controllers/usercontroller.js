@@ -3,8 +3,6 @@ const { User } = require('../db/schema')
 const router = express.Router({ mergeParams: true });
 
 
-
-
 router.get('/', async (req, res) => {
     try {
         const users = await User.find({})
@@ -47,7 +45,7 @@ router.post('/', async (req, res) => {
     })
     try {
         const newUser = await user.save()
-        console.log('saved user', newUser)
+        console.log('saved')
         res.json({ newUser })
     } catch (err) {
         console.log
