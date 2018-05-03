@@ -98,7 +98,7 @@ class UserPage extends Component {
                     handleChange={this.handleChange}
                     newUser={this.state.newUser}
                     getAllUsers={this.getAllUsers} /> : null}
-                <button onClick={this.toggleform}>Create</button>
+                <button onClick={this.toggleform}>Create a New Profile</button>
 
                 {this.state.users.map((user, i) => {
                     return (
