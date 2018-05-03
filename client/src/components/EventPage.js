@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import ItineraryPage from './ItineraryPage'
+import Button from 'material-ui/Button';
+
+
 
 class EventPage extends Component {
 
@@ -38,10 +41,13 @@ class EventPage extends Component {
 
         return (
 
-            <div>
 
-                <button onClick={this.destroy}>Destroy</button>
-                <br />
+            <div>
+                <Button variant="raised" color="primary">
+
+                    Destroy
+                    <button onClick={this.destroy}></button>
+                    <br /> </Button>
 
                 I am the Event Page for {this.state.user.name}
                 {this.state.events.map((event) => {
