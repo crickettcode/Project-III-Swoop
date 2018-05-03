@@ -34,7 +34,21 @@ router.delete('/:userId', async (req, res) => {
     }
 
 })
-
+router.post('/', async (req, res) => {
+    const newUserFromForm = req.body
+    const user = new User({
+        name: newUserFromForm.name,
+        dob: newDateFromForm.dob,
+        email: newEmailFromForm.email,
+        city: newCityFromForm.city
+    })
+    try {
+        const newUser = await user.save()
+        res.json({ newUser })
+    } catch (err) {
+        console.log
+    }
+})
 
 // router.post('/', (req, res) => {
 //     const newUserFromForm = req.body
@@ -47,23 +61,8 @@ router.delete('/:userId', async (req, res) => {
 
 //     const newUser = await user.save()
 //     res.json({ newUser })
-// })
+//})
 
-
-
-
-
-
-
-
-// router.post('/', (req, res) => {
-//     const newUser = new User(req.body.user)
-//     newUser.save()
-//         .then((user) => {
-//             res.json(user)
-//         })
-//         .catch(console.log)
-// })
 
 
 module.exports = router;

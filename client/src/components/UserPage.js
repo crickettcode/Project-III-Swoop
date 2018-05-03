@@ -38,6 +38,12 @@ class UserPage extends Component {
         }
     }
 
+    createNewUser = (newUser => {
+        axios.post(`/api/users`, { newUser })
+            .then((res) => {
+                this.setState({ user: res.data.user })
+            })
+    })
 
     render() {
         return (
