@@ -9,7 +9,8 @@ class User extends Component {
     render() {
         return (
             <div>
-                <Link to={`/users/${this.props.user._id}/events`}>{this.props.user.name}</Link>
+                <h4>Here is a user</h4>
+                <Link to={`/users/${this.props.user._id}/events`}>Name: {this.props.user.name}</Link>
 
             </div>
         )

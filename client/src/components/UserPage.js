@@ -51,23 +51,26 @@ class UserPage extends Component {
         newUser[event.target.name] = event.target.value
         this.setState({ newUser })
     }
-    // handleSubmit = async event => {
-    //     event.preventDefault()
-    //     const payload = {
-    //         name: this.state.name,
-    //         dob: this.state.dob,
-    //         email: this.state.email,
-    //         city: this.state.city
 
-    //     }
-    //     await axios.post(`/api/users`, payload);
-    //     await this.props.getAllUsers()
 
-    // }
+    handleSubmit = async event => {
+        event.preventDefault()
+        const payload = {
+            name: this.state.newUser.name,
+            dob: this.state.newUser.dob,
+            email: this.state.newUser.email,
+            city: this.state.newUser.city
+
+        }
+        console.log('calling axios with payload:', payload)
+        await axios.post(`/api/users`, payload);
+        // await this.props.getAllUsers()
+
+    }
 
     createNewUser = async event => {
         event.preventDefault()
-        const res = await axios.post(`/api/users`, this.state.newUser)
+        const res = await axios.post("/api/users", this.state.newUser)
         const users = [...this.state.users, res.data]
         this.setState({
             newUser: {
@@ -88,6 +91,7 @@ class UserPage extends Component {
             <div>
                 {this.state.form ? <NewUserForm
                     createNewUser={this.createNewUser}
+                    handleSubmit={this.handleSubmit}
                     handleChange={this.handleChange}
                     newUser={this.state.newUser}
                     getAllUsers={this.getAllUsers} /> : null}

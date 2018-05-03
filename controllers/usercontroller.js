@@ -35,6 +35,7 @@ router.delete('/:userId', async (req, res) => {
 
 })
 router.post('/', async (req, res) => {
+    console.log('posting', req.body)
     const newUserFromForm = req.body
     const user = new User({
         name: newUserFromForm.name,
@@ -44,6 +45,7 @@ router.post('/', async (req, res) => {
     })
     try {
         const newUser = await user.save()
+        console.log('saved user', newUser)
         res.json({ newUser })
     } catch (err) {
         console.log

@@ -11,16 +11,16 @@ class NewUserForm extends Component {
         return (
 
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.props.handleSubmit}>
                     <label>
                         name:
-                        <input onChange={this.handleChange} type="text" name="name" />
+                        <input onChange={this.props.handleChange} type="text" name="name" placeholder="name" value={this.props.newUser.name} />
                         d.o.b
-                        <input onChange={this.handleChange} type="text" dob="dob" />
+                        <input onChange={this.props.handleChange} type="text" name="dob" placeholder="dob" value={this.props.newUser.dob} />
                         email
-                        <input onChange={this.handleChange} type="text" email="email" />
+                        <input onChange={this.props.handleChange} type="text" name="email" placeholder="email" value={this.props.newUser.email} />
                         city
-                        <input onChange={this.handleChange} type="text" city="city" />
+                        <input onChange={this.props.handleChange} type="text" name="city" placeholder="city" value={this.props.newUser.city} />
 
                     </label>
                     <button>Submit</button>
