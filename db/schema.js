@@ -34,7 +34,7 @@ const EventSchema = new Schema({
 const UserSchema = new Schema({
     name: {
         type: String,
-        default: ""
+        default: "Bob Ross"
     },
 
     dob: {

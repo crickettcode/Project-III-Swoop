@@ -3,6 +3,8 @@ const { User } = require('../db/schema')
 const router = express.Router({ mergeParams: true });
 
 
+
+
 router.get('/', async (req, res) => {
     try {
         const users = await User.find({})
