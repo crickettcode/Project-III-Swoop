@@ -126,12 +126,19 @@ margin:auto;
 font-family: 'Pangolin', cursive;
 color:#466A46;
 border: solid;
+border-width:30px;
 background:#C8DEC8;
 border-color:#466A46;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
+padding:20px 30px;
 font-size:35px;
 
+
+button {
+    display:flex;
+    justify-content:center;
+}
 
 `

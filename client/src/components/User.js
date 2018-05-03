@@ -11,8 +11,8 @@ class User extends Component {
         return (
 
             <Profilestyle>
-                <h4></h4>
-                <Link to={`/users/${this.props.user._id}/events`}>I'm {this.props.user.name}</Link>
+
+                <h4> <Link to={`/users/${this.props.user._id}/events`}>I'm {this.props.user.name}</Link></h4>
 
             </Profilestyle>
 
@@ -25,7 +25,26 @@ export default User
 const Profilestyle = styled.div`
 
 display:flex;
-color:
+justify-content:flex-start;
+margin:auto;
+border:solid;
+font-family: 'Pangolin', cursive;
+color:white;
+padding:70px 82px 70px 82px
+
+
+h4{
+    display:flex;
+    padding: 15px 32px 15px 32px;
+    text-align:center;
+    font-size: 40px;
+    
+    
+}
+
+
+
+}
 
 
 `
