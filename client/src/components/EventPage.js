@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import ItineraryPage from './ItineraryPage'
+import styled from 'styled-components'
 import Button from 'material-ui/Button';
 
 
@@ -42,26 +43,25 @@ class EventPage extends Component {
         return (
 
 
-            <div>
-                <Button variant="raised" color="primary">
-
-                    Destroy
-                    <button onClick={this.destroy}></button>
-                    <br /> </Button>
+            <Eventstyle>
+                {/* <Button variant="raised" color="primary"> */}
+                {/* Destroy */}
+                <Button variant="raised" color="secondary" onClick={this.destroy}>Destroy</Button>
+                {/* <br /> </Button> */}
 
                 I am the Event Page for {this.state.user.name}
                 {this.state.events.map((event) => {
                     return (
-                        <div>
+                        <section>
 
                             <Link to={`/users/${this.props.match.params.userId}/events/${event._id}/itinerary`}>{event.date}</Link>
 
                             <li>{event.description}</li>
-                        </div>
+                        </section>
                     )
                 })}
 
-            </div>
+            </Eventstyle>
         )
     }
 }
@@ -77,4 +77,31 @@ class EventPage extends Component {
 
 
 
-export default EventPage 
+export default EventPage
+
+
+const Eventstyle = styled.div`
+min-height: 100vh;
+  margin: 0 auto;
+  font: 12pt Comic Sans MS;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+nav, section, aside {
+  flex-basis: 100px;
+  background: #F4C9D0;
+  color:whitesmoke;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+  line-height: 100px;
+}
+
+    section {
+  flex-grow: 1;
+}
+
+}
+
+`

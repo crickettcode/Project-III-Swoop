@@ -20,7 +20,7 @@ Project III/ Swoop - the app that makes the plan, so that you be spontaneous ..
 + Express/Node - server 
 + VSCode - text editor 
 + Styled Components 
-
++ Material UI
 
 ### Obstacles 
 
