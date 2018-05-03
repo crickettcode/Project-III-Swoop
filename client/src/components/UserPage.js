@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import User from './User'
 import NewUserForm from './NewUserForm'
-
+import styled from 'styled-components'
 
 
 
@@ -91,7 +91,7 @@ class UserPage extends Component {
     }
     render() {
         return (
-            <div>
+            <Formstyle>
                 {this.state.form ? <NewUserForm
                     createNewUser={this.createNewUser}
                     handleSubmit={this.handleSubmit}
@@ -111,7 +111,7 @@ class UserPage extends Component {
 
                 }
                 )}
-            </div>
+            </Formstyle>
 
 
         )
@@ -119,3 +119,19 @@ class UserPage extends Component {
 }
 
 export default UserPage
+
+const Formstyle = styled.div`
+
+margin:auto;
+font-family: 'Pangolin', cursive;
+color:#466A46;
+border: solid;
+background:#C8DEC8;
+border-color:#466A46;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+font-size:35px;
+
+
+`
