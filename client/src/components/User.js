@@ -28,7 +28,7 @@ display:flex;
 justify-content:flex-start;
 margin:auto;
 border:solid;
-font-family: 'Pangolin', cursive;
+font-family: 'cursive';
 color:white;
 padding:70px;
 
@@ -37,6 +37,7 @@ padding:70px;
 
 a {
 text-align:center;
+color:whitesmoke;
 }
 
 

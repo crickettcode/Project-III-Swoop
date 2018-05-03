@@ -118,7 +118,7 @@ export default UserPage
 const Formstyle = styled.div`
 
 margin:auto;
-font-family: 'Pangolin', cursive;
+font-family: 'cursive';
 color:#466A46;
 border: solid;
 border-width:30px;
