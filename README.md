@@ -19,7 +19,7 @@ Project III/ Swoop - the app that makes the plan, so that you be spontaneous ..
 + Mongo - database 
 + Express/Node - server 
 + VSCode - text editor 
-+ Material UI
++ Styled Components 
 
 
 ### Obstacles 
@@ -30,3 +30,9 @@ Project III/ Swoop - the app that makes the plan, so that you be spontaneous ..
 
 + Another challenge I faced was switching to *React* for my front-end (client-side) instead of using *Handlebars*.  
 + Learning to route with *React* was also a new challenge as well as styling components.
+
+### Take-Aways
+
+
++ For me, this project was more about personal growth as a developer than technical growth. Although, I did learn an immense amount technically, I also learned how to be more patient with myself in the learning process. Prior to this project, I often let my anxiety take control rather than taking control of my anxiety and creating a plan beforehand to manage my stress levels. In the future, I know to be proactive about my stressors surrounding large projects and ways to alleviate that stress before it gets to be overwhelming. 
++ CSS skills, As a full stack developer,I have learned that these matter just as much as my ability to make my projects function properly. 
