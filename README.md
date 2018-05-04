@@ -2,7 +2,7 @@
 Project III/ Swoop - the app that makes the plan, so that you be spontaneous ..
 
 
-##Design and Functionality
+## Design and Functionality
 
 + My app was designed to provide a plan when you have guests in town to visit. I often find that half of the battle in entertaining guests is making a decision on what to do in a large city. This app was created as a solution. The final build would choose itinerary for specific events the user selected by using a random API. It would pull in current events and activities in that area and structure your trip around those events so the only job left for you and your guests would be to relax and enjoy the ride. 
 
