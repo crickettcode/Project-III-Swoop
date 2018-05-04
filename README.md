@@ -36,3 +36,8 @@ Project III/ Swoop - the app that makes the plan, so that you be spontaneous ..
 
 + For me, this project was more about personal growth as a developer than technical growth. Although, I did learn an immense amount technically, I also learned how to be more patient with myself in the learning process. Prior to this project, I often let my anxiety take control rather than taking control of my anxiety and creating a plan beforehand to manage my stress levels. In the future, I know to be proactive about my stressors surrounding large projects and ways to alleviate that stress before it gets to be overwhelming. 
 + CSS skills, As a full stack developer,I have learned that these matter just as much as my ability to make my projects function properly. 
+
+### Improvements 
+
++ I would like to continue using *React* in building projects and continue to practice learning the language. I would also like to vastly improve my use of CSS and front-end design. 
++ Overall, this project was the most difficult but also the one that taught me the most. I am proud of myself for perseverance and am happy with my progress.
