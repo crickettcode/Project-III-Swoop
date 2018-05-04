@@ -102,7 +102,7 @@ font-family:'Courier New', Courier, monospace;
  section {
   flex-basis: 100px;
   /* background: #990012; */
-  background: #FFEFAC; */
+  background: #FFEFAC; 
   border-radius: 10px;
   margin: 5px;
   color:#4C979B;
