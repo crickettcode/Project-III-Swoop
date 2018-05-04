@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'react-router-dom'
 import axios from 'axios'
-
+import styled from 'styled-components'
 
 
 
@@ -30,22 +30,25 @@ class ItineraryPage extends Component {
     render() {
 
         return (
-            <div>
-                <h1>Hello from the ininerary</h1>
-                I am the Itinerary page for {this.state.event.description}
+            <Itinerarystyle>
+                <h1>Hello I am the Itinerary</h1>
+                <section>
+                    I am the Itinerary page for </section><aside>{this.state.event.description}</aside>
                 {this.state.itinerary.map((itinerary, i) => {
+
                     return (
-                        <div>
+
+                        <footer>
                             <ul>
                                 <li>{itinerary.title}</li>
                                 <li>{itinerary.description}</li>
                                 <li>{itinerary.duration}</li>
                             </ul>
-                        </div>
+                        </footer>
                     )
                 })}
 
-            </div>
+            </Itinerarystyle>
         )
     }
 }
@@ -53,3 +56,69 @@ class ItineraryPage extends Component {
 
 
 export default ItineraryPage
+
+const Itinerarystyle = styled.div`
+
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: 'cursive';
+  background:#4C979B;
+  display: flex;
+  color: whitesmoke;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header, main {
+  width: 100%;
+  height: 10px;
+  background: #FFE77D;
+  color: black;
+  text-align: center;
+  line-height: 50px;
+}
+
+footer {
+  flex-grow: 1;
+  background: #FFEFAC;
+  display: flex;
+  justify-content: space-around;
+  font-size:15px;
+  color:#4C979B;
+  border:solid;
+  border-radius:20px;
+}
+
+aside {
+    display:flex;
+    justify-content:center;
+    border-radius:20px;
+font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+ section {
+  flex-basis: 100px;
+  /* background: #990012; */
+  background: #FFEFAC; */
+  border-radius: 10px;
+  margin: 5px;
+  color:#4C979B;
+  text-align: center;
+  line-height: 100px;
+}
+
+section {
+  flex-grow: 1;
+  font-family:'cursive';
+  font-size: 20px;
+}
+
+@media (max-width: 400px){
+  main {
+    flex-direction: column;
+  }
+
+}
+
+`
