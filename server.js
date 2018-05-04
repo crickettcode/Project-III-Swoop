@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 const index = require('./controllers/index')
 const userController = require('./controllers/userController')
-app.use('/', index)
+// app.use('/', index)
 app.use('/api/users', userController)
 
 app.use(express.static(__dirname + '/client/build/'));
