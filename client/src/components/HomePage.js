@@ -50,8 +50,6 @@ margin:0 auto;
 
 }
 
-
-
 footer{
     background: #4C979B;
     color:whitesmoke;

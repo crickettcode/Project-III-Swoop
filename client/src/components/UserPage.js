@@ -62,7 +62,7 @@ class UserPage extends Component {
         }
         console.log('calling axios with payload:', payload)
         await axios.post(`/api/users`, payload);
-        // await this.props.getAllUsers()
+
 
     }
 
