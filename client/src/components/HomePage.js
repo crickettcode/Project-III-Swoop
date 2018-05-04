@@ -65,6 +65,8 @@ footer{
 
 a {
     color:white;
+    font-family:'cursive';
+    font-size:20px;
 }
 
 h1{

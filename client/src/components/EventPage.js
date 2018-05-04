@@ -88,6 +88,7 @@ min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding:40px;
 
 nav, section, aside {
   flex-basis: 100px;
@@ -98,6 +99,11 @@ nav, section, aside {
   text-align: center;
   line-height: 100px;
   font-size:20px;
+}
+
+a {
+    color:whitesmoke;
+    font-family:'cursive'
 }
 
     section {
