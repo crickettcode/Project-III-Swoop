@@ -19,7 +19,7 @@ class App extends Component {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/users" component={UserPage} />
             <Route exact path="/users/:userId/events" component={EventPage} />
-            <Route exact path="/users/:userId/events/:eventId/itinerary" component={ItineraryPage} />
+            <Route exact path="/users/:userId/event/:eventId/itinerary" component={ItineraryPage} />
           </Switch>
         </div>
       </Router>

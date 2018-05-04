@@ -55,7 +55,7 @@ class EventPage extends Component {
                     return (
                         <section>
 
-                            <Link to={`/users/${this.props.match.params.userId}/events/${event._id}/itinerary`}>Go here for the {event.date}</Link>
+                            <Link to={`/users/${this.props.match.params.userId}/event/${event._id}/itinerary`}>Go here for the {event.date}</Link>
 
                             <li>{event.description}</li>
                         </section>

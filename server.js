@@ -19,15 +19,22 @@ connection.on('error', (err) => {
 app.use(logger('dev'))
 app.use(bodyParser.json());
 
+app.use(express.static(__dirname + '/client/build/'));
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/client/build/index.html')
+})
+
 const index = require('./controllers/index')
 const userController = require('./controllers/userController')
 // app.use('/', index)
 app.use('/api/users', userController)
 
-app.use(express.static(__dirname + '/client/build/'));
-app.get('/*', (req, res) => {
-    res.sendFile(__dirname + '/client/build/index.html')
-})
+const itineraryController = require('./controllers/itinerarycontroller')
+app.use('/api/users/:userId/event/:eventId', itineraryController)
+
+
+
 
 
 

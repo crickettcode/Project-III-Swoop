@@ -8,7 +8,6 @@ import axios from 'axios'
 class ItineraryPage extends Component {
 
     state = {
-        user: {},
         event: {},
         itinerary: []
     }
@@ -16,23 +15,24 @@ class ItineraryPage extends Component {
     componentDidMount() {
         const item = this.props.match.params.userId
         const eventId = this.props.match.params.eventId
-        console.log(item)
+        console.log('eventId from Itinerary page: ', eventId)
 
-        axios.get(`/api/users/${item}/event/${eventId}`)
+        axios.get(`/api/users/${item}/event/${eventId}/itinerary`)
             .then(response => {
                 console.log(response.data)
                 this.setState({
-                    user: response.data,
-                    event: response.data.event,
+                    event: response.data,
                     itinerary: response.data.itinerary
                 })
             })
     }
 
     render() {
+
         return (
             <div>
-                I am the Itinerary page for {this.state.event}
+                <h1>Hello from the ininerary</h1>
+                I am the Itinerary page for {this.state.event.description}
                 {this.state.itinerary.map((itinerary, i) => {
                     return (
                         <div>
