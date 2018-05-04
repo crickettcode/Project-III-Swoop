@@ -67,6 +67,7 @@ const Itinerarystyle = styled.div`
   color: whitesmoke;
   flex-direction: column;
   justify-content: space-between;
+  align-content:center;
 }
 
 header, main {
@@ -83,10 +84,11 @@ footer {
   background: #FFEFAC;
   display: flex;
   justify-content: space-around;
-  font-size:15px;
+  font-size:55x;
   color:#4C979B;
   border:solid;
   border-radius:20px;
+  align-items:center
 }
 
 aside {
