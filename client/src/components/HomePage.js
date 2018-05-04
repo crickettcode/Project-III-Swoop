@@ -44,11 +44,10 @@ margin:0 auto;
 p {
     font-family:"cursive";
 padding:50px;
-/* justify-content:center; */
+
 font-size:17px;
 margin:0 auto;
-/* width:200px; */
-/* justify-content:center; */
+
 }
 
 
